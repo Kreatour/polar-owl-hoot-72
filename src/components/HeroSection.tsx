@@ -82,32 +82,32 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col gap-6 justify-center items-center">
           <Button 
             size="lg" 
             className="bg-gradient-meme hover:shadow-meme text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
           >
-            <ShoppingCart className="mr-2 h-5 w-5" />
             Buy Polar Owl
           </Button>
           
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-2 border-accent text-accent hover:bg-gradient-moonlight hover:text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-          >
-            <Twitter className="mr-2 h-5 w-5" />
-            Follow on X
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-2 border-primary text-primary hover:bg-gradient-owl hover:text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-          >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Join Telegram
-          </Button>
+          {/* Social Icon Buttons */}
+          <div className="flex gap-4 justify-center items-center">
+            <Button 
+              size="icon"
+              variant="outline"
+              className="w-12 h-12 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-full transition-all duration-300 hover:scale-110"
+            >
+              <Twitter className="h-6 w-6" />
+            </Button>
+            
+            <Button 
+              size="icon"
+              variant="outline"
+              className="w-12 h-12 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 hover:scale-110"
+            >
+              <MessageCircle className="h-6 w-6" />
+            </Button>
+          </div>
         </div>
 
         {/* Floating elements */}
