@@ -47,16 +47,32 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        owl: {
+          wisdom: "hsl(var(--owl-wisdom))",
+          feather: "hsl(var(--owl-feather))",
         },
+        moonlight: "hsl(var(--moonlight))",
+        "polar-ice": "hsl(var(--polar-ice))",
+        "meme-glow": "hsl(var(--meme-glow))",
+      },
+      fontFamily: {
+        sans: ['Comic Neue', 'Nunito', 'system-ui', 'sans-serif'],
+        meme: ['Comic Neue', 'cursive'],
+      },
+      backgroundImage: {
+        'gradient-night': 'var(--gradient-night)',
+        'gradient-owl': 'var(--gradient-owl)',
+        'gradient-moonlight': 'var(--gradient-moonlight)',
+        'gradient-meme': 'var(--gradient-meme)',
+      },
+      boxShadow: {
+        owl: 'var(--shadow-owl)',
+        moonlight: 'var(--shadow-moonlight)',
+        meme: 'var(--shadow-meme)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",
