@@ -1,13 +1,37 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Sticker } from "lucide-react";
+import { MessageCircle, Sticker, Twitter, Copy, Check, ShoppingCart } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import polarOwlHero from "@/assets/polar-owl-hero.png";
 
 const HeroSection = () => {
   const [isNightVision, setIsNightVision] = useState(false);
+  const [copiedCA, setCopiedCA] = useState(false);
+  const { toast } = useToast();
+  
+  // Mock contract address - replace with actual CA
+  const contractAddress = "EQD4FPq-PRDieyQKkizFTRtSDyucUIqrj0v_zXhbOWl5L5Ji";
 
   const toggleNightVision = () => {
     setIsNightVision(!isNightVision);
+  };
+
+  const copyContractAddress = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopiedCA(true);
+      toast({
+        title: "Contract Address Copied!",
+        description: "CA has been copied to your clipboard",
+      });
+      setTimeout(() => setCopiedCA(false), 2000);
+    } catch (err) {
+      toast({
+        title: "Failed to copy",
+        description: "Please copy manually: " + contractAddress,
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -39,23 +63,50 @@ const HeroSection = () => {
           Born from OG Telegram stickers. Wise, meme-able, and unforgettable.
         </p>
 
+        {/* Contract Address */}
+        <div className="mb-6 p-4 bg-card/30 backdrop-blur-sm rounded-2xl border border-border max-w-md mx-auto">
+          <p className="text-sm text-muted-foreground mb-2">Contract Address:</p>
+          <div className="flex items-center gap-2">
+            <code className="flex-1 text-sm font-mono bg-muted/50 p-2 rounded text-foreground overflow-hidden text-ellipsis">
+              {contractAddress.slice(0, 20)}...{contractAddress.slice(-8)}
+            </code>
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={copyContractAddress}
+              className="p-2 hover:bg-accent/20"
+            >
+              {copiedCA ? <Check className="h-4 w-4 text-green-400" /> : <Copy className="h-4 w-4" />}
+            </Button>
+          </div>
+        </div>
+
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-gradient-moonlight hover:shadow-moonlight text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-gradient-meme hover:shadow-meme text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
           >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Join the Nest (Telegram)
+            <ShoppingCart className="mr-2 h-5 w-5" />
+            Buy Polar Owl
           </Button>
           
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-accent text-accent hover:bg-gradient-meme hover:text-accent-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            className="border-2 border-accent text-accent hover:bg-gradient-moonlight hover:text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
           >
-            <Sticker className="mr-2 h-5 w-5" />
-            Get Stickers
+            <Twitter className="mr-2 h-5 w-5" />
+            Follow on X
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-2 border-primary text-primary hover:bg-gradient-owl hover:text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+          >
+            <MessageCircle className="mr-2 h-5 w-5" />
+            Join Telegram
           </Button>
         </div>
 
