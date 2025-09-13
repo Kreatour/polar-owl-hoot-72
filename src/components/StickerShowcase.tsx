@@ -1,34 +1,63 @@
 import { Button } from "@/components/ui/button";
 import { Download, Sparkles } from "lucide-react";
-import sticker1 from "@/assets/sticker-1.png";
-import sticker2 from "@/assets/sticker-2.png";
-import sticker3 from "@/assets/sticker-3.png";
+import stickerOk from "@/assets/stickers/polar-owl-ok.gif";
+import stickerParty from "@/assets/stickers/polar-owl-party.gif";
+import stickerQuestion from "@/assets/stickers/polar-owl-question.gif";
+import stickerTravel from "@/assets/stickers/polar-owl-travel.gif";
+import stickerShy from "@/assets/stickers/polar-owl-shy.gif";
+import stickerLaugh from "@/assets/stickers/polar-owl-laugh.gif";
+import stickerFormal from "@/assets/stickers/polar-owl-formal.gif";
+import stickerCoffee from "@/assets/stickers/polar-owl-coffee.gif";
 
 const StickerShowcase = () => {
   const stickers = [
     { 
       id: 1, 
-      image: sticker1, 
-      name: "Happy Owl", 
+      image: stickerOk, 
+      name: "OK Owl", 
       rotation: "rotate-12",
       scale: "scale-110",
       delay: "0s" 
     },
     { 
       id: 2, 
-      image: sticker2, 
-      name: "Wise Owl", 
+      image: stickerParty, 
+      name: "Party Owl", 
       rotation: "-rotate-6",
       scale: "scale-105",
       delay: "0.3s" 
     },
     { 
       id: 3, 
-      image: sticker3, 
-      name: "CTO'd Owl", 
+      image: stickerQuestion, 
+      name: "Curious Owl", 
       rotation: "rotate-3",
       scale: "scale-115",
       delay: "0.6s" 
+    },
+    { 
+      id: 4, 
+      image: stickerTravel, 
+      name: "Travel Owl", 
+      rotation: "-rotate-12",
+      scale: "scale-108",
+      delay: "0.9s" 
+    },
+    { 
+      id: 5, 
+      image: stickerShy, 
+      name: "Shy Owl", 
+      rotation: "rotate-8",
+      scale: "scale-112",
+      delay: "1.2s" 
+    },
+    { 
+      id: 6, 
+      image: stickerLaugh, 
+      name: "CTO'd Owl", 
+      rotation: "-rotate-4",
+      scale: "scale-120",
+      delay: "1.5s" 
     },
   ];
 
@@ -47,27 +76,30 @@ const StickerShowcase = () => {
         </p>
 
         {/* Playful scattered sticker layout */}
-        <div className="relative min-h-[400px] mb-16">
+        <div className="relative min-h-[500px] mb-16">
           {stickers.map((sticker, index) => (
             <div 
               key={sticker.id}
               className={`absolute cursor-pointer group ${
-                index === 0 ? 'top-8 left-1/4 md:left-1/6' :
-                index === 1 ? 'top-24 right-1/4 md:right-1/6' :
-                'bottom-8 left-1/2 transform -translate-x-1/2'
+                index === 0 ? 'top-8 left-1/6 md:left-1/12' :
+                index === 1 ? 'top-12 right-1/5 md:right-1/8' :
+                index === 2 ? 'top-32 left-1/2 transform -translate-x-1/2' :
+                index === 3 ? 'bottom-24 left-1/4' :
+                index === 4 ? 'bottom-8 right-1/3' :
+                'top-48 right-1/6'
               }`}
               style={{ 
                 animationDelay: sticker.delay,
                 transform: `${sticker.rotation}`
               }}
             >
-              <div className={`bg-card/60 backdrop-blur-sm rounded-3xl p-8 border-2 border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-meme-glow/20 ${sticker.scale} hover:scale-125 feather-float`}>
+              <div className={`bg-card/60 backdrop-blur-sm rounded-3xl p-6 border-2 border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-meme-glow/20 ${sticker.scale} hover:scale-125 feather-float`}>
                 <img 
                   src={sticker.image} 
                   alt={`${sticker.name} - Polar Owl sticker`}
-                  className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-3 rounded-2xl transition-transform duration-300 group-hover:rotate-12"
+                  className="w-20 h-20 md:w-28 md:h-28 mx-auto mb-3 rounded-2xl transition-transform duration-300 group-hover:rotate-12"
                 />
-                <h3 className="font-bold text-sm md:text-lg text-gradient-owl group-hover:text-gradient-meme transition-all duration-300">
+                <h3 className="font-bold text-xs md:text-sm text-gradient-owl group-hover:text-gradient-meme transition-all duration-300">
                   {sticker.name}
                 </h3>
               </div>

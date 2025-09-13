@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Sticker, Twitter, Copy, Check, ShoppingCart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import polarOwlHero from "@/assets/polar-owl-hero.png";
+import polarOwlHero from "@/assets/polar-owl-hero-new.png";
 
 const HeroSection = () => {
   const [isNightVision, setIsNightVision] = useState(false);
   const [copiedCA, setCopiedCA] = useState(false);
   const { toast } = useToast();
   
-  // Mock contract address - replace with actual CA
-  const contractAddress = "EQD4FPq-PRDieyQKkizFTRtSDyucUIqrj0v_zXhbOWl5L5Ji";
+  // Contract address
+  const contractAddress = "EQCLc8jRnpyRqZPthgH7dM4G-cDFpW7MY4k3Pj1_7fWPhQfN";
 
   const toggleNightVision = () => {
     setIsNightVision(!isNightVision);

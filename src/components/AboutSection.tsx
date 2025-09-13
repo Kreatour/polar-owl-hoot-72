@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Heart, Zap } from "lucide-react";
+import stickerCoffee from "@/assets/stickers/polar-owl-coffee.gif";
 
 const AboutSection = () => {
   return (
@@ -48,6 +49,15 @@ const AboutSection = () => {
               </p>
             </CardContent>
           </Card>
+        </div>
+        
+        {/* Floating coffee owl */}
+        <div className="absolute -top-8 right-4 opacity-60 feather-float">
+          <img 
+            src={stickerCoffee} 
+            alt="Coffee Owl sticker" 
+            className="w-16 h-16 rounded-full"
+          />
         </div>
       </div>
     </section>

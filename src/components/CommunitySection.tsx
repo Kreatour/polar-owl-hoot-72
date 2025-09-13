@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Twitter, Sticker, Users } from "lucide-react";
+import stickerParty from "@/assets/stickers/polar-owl-party.gif";
 
 const CommunitySection = () => {
   const socialLinks = [

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, XCircle, Heart, Infinity } from "lucide-react";
+import stickerFormal from "@/assets/stickers/polar-owl-formal.gif";
 
 const Roadmap = () => {
   const phases = [
@@ -78,12 +79,21 @@ const Roadmap = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center relative">
           <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-6 border border-border max-w-2xl mx-auto">
             <Infinity className="h-8 w-8 text-moonlight mx-auto mb-4" />
             <p className="text-muted-foreground italic">
               "Every ending is a new beginning. The owl may have crashed, but legends soar forever in the hearts of the community." 
             </p>
+          </div>
+          
+          {/* Formal owl mascot */}
+          <div className="absolute -bottom-4 -right-4 opacity-70 feather-float">
+            <img 
+              src={stickerFormal} 
+              alt="Formal Owl sticker" 
+              className="w-20 h-20 rounded-full"
+            />
           </div>
         </div>
       </div>
