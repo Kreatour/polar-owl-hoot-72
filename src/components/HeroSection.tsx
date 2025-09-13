@@ -86,7 +86,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-gradient-meme hover:shadow-meme text-primary-foreground font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-            onClick={() => window.open('https://t.me/stonks_sniper_bot?start=id=chibhanzi=EQCL2JFltDVh1mU6CLc7KvzGD7DmpwHWHkok_EnqQlaycfgZ', '_blank')}
+            onClick={() => window.open('https://t.me/stonks_sniper_bot?start=id=Chibhanzi=EQCLc8jRnpyRqZPthgH7dM4G-cDFpW7MY4k3Pj1_7fWPhQfN', '_blank')}
           >
             Buy Polar Owl
           </Button>
