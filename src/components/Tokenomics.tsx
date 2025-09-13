@@ -1,9 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Infinity, Users, Sparkles } from "lucide-react";
+import stickerTravel2 from "@/assets/stickers/polar-owl-travel-2.gif";
 
 const Tokenomics = () => {
   return (
-    <section className="py-12 px-4">
+    <section className="py-12 px-4 relative">
+      {/* Floating travel sticker */}
+      <div className="absolute top-8 right-4 md:right-12 z-10 opacity-60 hover:opacity-100 transition-opacity duration-300 feather-float">
+        <img 
+          src={stickerTravel2} 
+          alt="Traveling owl with suitcase"
+          className="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+      </div>
+      
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold font-meme mb-4 text-gradient-meme">

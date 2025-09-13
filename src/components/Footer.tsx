@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import polarOwlHero from "@/assets/polar-owl-hero.png";
+import stickerCoffee2 from "@/assets/stickers/polar-owl-coffee-2.gif";
 
 const Footer = () => {
   const [hootCount, setHootCount] = useState(0);
@@ -26,7 +27,16 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-16 px-4 bg-gradient-to-t from-card/50 to-background border-t border-border">
+    <footer className="py-16 px-4 bg-gradient-to-t from-card/50 to-background border-t border-border relative">
+      {/* Floating coffee sticker */}
+      <div className="absolute top-8 left-4 md:left-12 z-10 opacity-50 hover:opacity-90 transition-opacity duration-300 feather-float" style={{ animationDelay: '1s' }}>
+        <img 
+          src={stickerCoffee2} 
+          alt="Coffee owl with big eyes"
+          className="w-14 h-14 md:w-18 md:h-18 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer"
+        />
+      </div>
+      
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <div className="mb-6">

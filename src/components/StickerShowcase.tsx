@@ -59,45 +59,30 @@ const StickerShowcase = () => {
           The legendary stickers that launched a thousand memes. Pure Telegram nostalgia! 🎭
         </p>
 
-        {/* Playful scattered sticker layout */}
-        <div className="relative min-h-[350px] mb-12">
+        {/* Clean grid layout for better presentation */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
           {stickers.map((sticker, index) => (
             <div 
               key={sticker.id}
-              className={`absolute cursor-pointer group ${
-                index === 0 ? 'top-8 left-1/6 md:left-1/12' :
-                index === 1 ? 'top-12 right-1/5 md:right-1/8' :
-                index === 2 ? 'top-32 left-1/2 transform -translate-x-1/2' :
-                'bottom-16 right-1/4'
-              }`}
-              style={{ 
-                animationDelay: sticker.delay,
-                transform: `${sticker.rotation}`
-              }}
+              className="cursor-pointer group relative"
+              style={{ animationDelay: sticker.delay }}
             >
-              <div className={`bg-card/60 backdrop-blur-sm rounded-3xl p-6 border-2 border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-meme-glow/20 ${sticker.scale} hover:scale-125 feather-float`}>
-                <img 
-                  src={sticker.image} 
-                  alt={`${sticker.name} - Polar Owl sticker`}
-                  className="w-20 h-20 md:w-28 md:h-28 mx-auto mb-3 rounded-2xl transition-transform duration-300 group-hover:rotate-12"
-                />
-                <h3 className="font-bold text-xs md:text-sm text-gradient-owl group-hover:text-gradient-meme transition-all duration-300">
+              <div className={`bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm rounded-3xl p-6 border-2 border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-meme-glow/30 hover:scale-105 feather-float ${sticker.rotation}`}>
+                <div className="relative overflow-hidden rounded-2xl mb-4">
+                  <img 
+                    src={sticker.image} 
+                    alt={`${sticker.name} - Polar Owl sticker`}
+                    className="w-24 h-24 md:w-32 md:h-32 mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
+                  />
+                  <div className="absolute inset-0 bg-gradient-meme opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl"></div>
+                </div>
+                <h3 className="font-bold text-sm md:text-base text-gradient-owl group-hover:text-gradient-meme transition-all duration-300">
                   {sticker.name}
                 </h3>
+                <div className="w-12 h-1 bg-gradient-moonlight mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
-          
-          {/* Floating mini stickers */}
-          <div className="absolute top-4 right-4 opacity-30 animate-pulse">
-            <div className="w-8 h-8 bg-gradient-owl rounded-full"></div>
-          </div>
-          <div className="absolute bottom-12 left-8 opacity-20 feather-float" style={{ animationDelay: '2s' }}>
-            <div className="w-6 h-6 bg-gradient-meme rounded-full"></div>
-          </div>
-          <div className="absolute top-1/2 left-4 opacity-25 feather-float" style={{ animationDelay: '4s' }}>
-            <div className="w-4 h-4 bg-gradient-moonlight rounded-full"></div>
-          </div>
         </div>
 
         <div className="text-center">

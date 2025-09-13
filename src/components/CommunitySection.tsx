@@ -39,7 +39,7 @@ const CommunitySection = () => {
           </p>
         </div>
 
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex justify-center gap-6 mb-8">
           {socialLinks.map((link, index) => {
             const Icon = link.icon;
             return (
@@ -47,9 +47,9 @@ const CommunitySection = () => {
                 key={index}
                 variant="outline"
                 size="lg"
-                className={`group p-4 border-2 border-border ${link.bgColor} ${link.color} transition-all duration-300 hover:scale-105 hover:shadow-moonlight`}
+                className={`group p-6 border-2 border-border ${link.bgColor} ${link.color} transition-all duration-300 hover:scale-105 hover:shadow-moonlight min-w-[80px] min-h-[80px]`}
               >
-                <Icon className="h-6 w-6" />
+                <Icon className="h-8 w-8" />
               </Button>
             );
           })}
