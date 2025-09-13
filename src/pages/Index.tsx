@@ -1,5 +1,6 @@
 import TopBanner from "@/components/TopBanner";
 import HeroSection from "@/components/HeroSection";
+import WiseOwlSection from "@/components/WiseOwlSection";
 import AboutSection from "@/components/AboutSection";
 import StickerShowcase from "@/components/StickerShowcase";
 import Tokenomics from "@/components/Tokenomics";
@@ -14,6 +15,7 @@ const Index = () => {
       <TopBanner />
       <main>
         <HeroSection />
+        <WiseOwlSection />
         <AboutSection />
         <StickerShowcase />
         <Tokenomics />
