@@ -4,13 +4,13 @@ import stickerCoffee from "@/assets/stickers/polar-owl-coffee.gif";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 px-4">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold font-meme text-center mb-4 text-gradient-owl">
           What's Polar Owl?
         </h2>
         
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="max-w-4xl mx-auto text-center mb-8 relative">
           <p className="text-lg text-foreground leading-relaxed">
             Polar Owl was never just a coin — it was a <span className="text-gradient-moonlight font-bold">vibe</span>. 
             Hatched from OG Telegram stickers, this owl brought wisdom, memes, and community energy to the TON forest. 
@@ -51,14 +51,14 @@ const AboutSection = () => {
           </Card>
         </div>
         
-        {/* Floating coffee owl */}
-        <div className="absolute -top-8 right-4 opacity-60 feather-float">
-          <img 
-            src={stickerCoffee} 
-            alt="Coffee Owl sticker" 
-            className="w-16 h-16 rounded-full"
-          />
-        </div>
+          {/* Coffee owl */}
+          <div className="absolute top-0 right-8 opacity-60 feather-float">
+            <img 
+              src={stickerCoffee} 
+              alt="Coffee Owl sticker" 
+              className="w-12 h-12 rounded-full"
+            />
+          </div>
       </div>
     </section>
   );

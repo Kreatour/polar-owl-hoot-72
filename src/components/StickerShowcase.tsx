@@ -37,32 +37,16 @@ const StickerShowcase = () => {
     },
     { 
       id: 4, 
-      image: stickerTravel, 
-      name: "Travel Owl", 
-      rotation: "-rotate-12",
-      scale: "scale-108",
-      delay: "0.9s" 
-    },
-    { 
-      id: 5, 
-      image: stickerShy, 
-      name: "Shy Owl", 
-      rotation: "rotate-8",
-      scale: "scale-112",
-      delay: "1.2s" 
-    },
-    { 
-      id: 6, 
       image: stickerLaugh, 
       name: "CTO'd Owl", 
       rotation: "-rotate-4",
       scale: "scale-120",
-      delay: "1.5s" 
+      delay: "0.9s" 
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-card/20 relative overflow-hidden">
+    <section className="py-12 px-4 bg-gradient-to-b from-background to-card/20 relative overflow-hidden">
       <div className="container max-w-6xl mx-auto text-center">
         <div className="mb-4">
           <Sparkles className="h-8 w-8 text-moonlight mx-auto mb-2 animate-pulse" />
@@ -76,7 +60,7 @@ const StickerShowcase = () => {
         </p>
 
         {/* Playful scattered sticker layout */}
-        <div className="relative min-h-[500px] mb-16">
+        <div className="relative min-h-[350px] mb-12">
           {stickers.map((sticker, index) => (
             <div 
               key={sticker.id}
@@ -84,9 +68,7 @@ const StickerShowcase = () => {
                 index === 0 ? 'top-8 left-1/6 md:left-1/12' :
                 index === 1 ? 'top-12 right-1/5 md:right-1/8' :
                 index === 2 ? 'top-32 left-1/2 transform -translate-x-1/2' :
-                index === 3 ? 'bottom-24 left-1/4' :
-                index === 4 ? 'bottom-8 right-1/3' :
-                'top-48 right-1/6'
+                'bottom-16 right-1/4'
               }`}
               style={{ 
                 animationDelay: sticker.delay,

@@ -3,7 +3,7 @@ import { Infinity, Users, Sparkles } from "lucide-react";
 
 const Tokenomics = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 px-4">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold font-meme mb-4 text-gradient-meme">
