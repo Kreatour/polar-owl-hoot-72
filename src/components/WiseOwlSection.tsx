@@ -8,7 +8,7 @@ const WiseOwlSection = () => {
           <img 
             src={wiseOwlSticker} 
             alt="Wise Polar Owl pointing up with wisdom"
-            className="w-32 h-32 mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer animate-[bounce_3s_ease-in-out_infinite]"
+            className="w-32 h-32 mx-auto hover:scale-110 transition-transform duration-300 cursor-pointer"
           />
           <div className="absolute inset-0 rounded-full bg-gradient-moonlight opacity-10 blur-xl animate-pulse"></div>
         </div>
