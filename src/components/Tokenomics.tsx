@@ -31,9 +31,9 @@ const Tokenomics = () => {
               <CardTitle className="text-gradient-owl">Supply</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="font-bold text-2xl text-gradient-moonlight mb-2">∞</p>
+              <p className="font-bold text-2xl text-gradient-moonlight mb-2">1M</p>
               <p className="text-muted-foreground">
-                Infinite wisdom, finite memes
+                Million wise owls in the forest
               </p>
             </CardContent>
           </Card>

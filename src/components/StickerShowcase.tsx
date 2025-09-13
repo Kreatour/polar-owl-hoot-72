@@ -150,6 +150,7 @@ const StickerShowcase = () => {
           <Button 
             size="lg"
             className="bg-gradient-meme hover:shadow-meme text-accent-foreground font-bold px-10 py-4 rounded-full transition-all duration-300 hover:scale-110 group relative overflow-hidden"
+            onClick={() => window.open('https://t.me/addstickers/Polar_Owl', '_blank')}
           >
             <span className="relative z-10 flex items-center gap-2">
               <Download className="h-5 w-5 group-hover:animate-bounce" />
