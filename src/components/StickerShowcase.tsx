@@ -8,6 +8,7 @@ import stickerShy from "@/assets/stickers/polar-owl-shy.gif";
 import stickerLaugh from "@/assets/stickers/polar-owl-laugh.gif";
 import stickerFormal from "@/assets/stickers/polar-owl-formal.gif";
 import stickerCoffee from "@/assets/stickers/polar-owl-coffee.gif";
+import stickerDoctor from "@/assets/stickers/polar-owl-doctor.gif";
 
 const StickerShowcase = () => {
   const stickers = [
@@ -15,33 +16,49 @@ const StickerShowcase = () => {
       id: 1, 
       image: stickerOk, 
       name: "OK Owl", 
-      rotation: "rotate-12",
-      scale: "scale-110",
-      delay: "0s" 
+      size: "w-32 h-32",
+      position: "col-span-1 row-span-1",
+      rotation: "rotate-12"
     },
     { 
       id: 2, 
       image: stickerParty, 
       name: "Party Owl", 
-      rotation: "-rotate-6",
-      scale: "scale-105",
-      delay: "0.3s" 
+      size: "w-40 h-40",
+      position: "col-span-1 row-span-2",
+      rotation: "-rotate-6"
     },
     { 
       id: 3, 
-      image: stickerQuestion, 
-      name: "Curious Owl", 
-      rotation: "rotate-3",
-      scale: "scale-115",
-      delay: "0.6s" 
+      image: stickerDoctor, 
+      name: "Dr. Owl", 
+      size: "w-36 h-36",
+      position: "col-span-1 row-span-1",
+      rotation: "rotate-3"
     },
     { 
       id: 4, 
       image: stickerLaugh, 
       name: "CTO'd Owl", 
-      rotation: "-rotate-4",
-      scale: "scale-120",
-      delay: "0.9s" 
+      size: "w-28 h-28",
+      position: "col-span-1 row-span-1",
+      rotation: "-rotate-12"
+    },
+    { 
+      id: 5, 
+      image: stickerShy, 
+      name: "Shy Owl", 
+      size: "w-32 h-32",
+      position: "col-span-1 row-span-1",
+      rotation: "rotate-6"
+    },
+    { 
+      id: 6, 
+      image: stickerFormal, 
+      name: "Formal Owl", 
+      size: "w-36 h-36",
+      position: "col-span-1 row-span-1",
+      rotation: "-rotate-3"
     },
   ];
 
@@ -59,30 +76,74 @@ const StickerShowcase = () => {
           The legendary stickers that launched a thousand memes. Pure Telegram nostalgia! 🎭
         </p>
 
-        {/* Clean grid layout for better presentation */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
-          {stickers.map((sticker, index) => (
-            <div 
-              key={sticker.id}
-              className="cursor-pointer group relative"
-              style={{ animationDelay: sticker.delay }}
-            >
-              <div className={`bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm rounded-3xl p-6 border-2 border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-meme-glow/30 hover:scale-105 feather-float ${sticker.rotation}`}>
-                <div className="relative overflow-hidden rounded-2xl mb-4">
-                  <img 
-                    src={sticker.image} 
-                    alt={`${sticker.name} - Polar Owl sticker`}
-                    className="w-24 h-24 md:w-32 md:h-32 mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
-                  />
-                  <div className="absolute inset-0 bg-gradient-meme opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl"></div>
+        {/* Creative masonry-style layout */}
+        <div className="relative max-w-5xl mx-auto mb-12">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-meme-glow/10 to-moonlight/5 rounded-3xl blur-3xl"></div>
+          
+          {/* Floating stickers arrangement */}
+          <div className="relative grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-8">
+            
+            {/* Top row - scattered */}
+            <div className="col-start-1 md:col-start-2 transform -translate-y-4 rotate-12">
+              <div className="group cursor-pointer">
+                <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-accent/50 transition-all duration-300 hover:scale-110 hover:-rotate-6">
+                  <img src={stickerOk} alt="OK Owl" className="w-20 h-20 mx-auto group-hover:animate-bounce" />
+                  <p className="text-xs font-bold text-center mt-2 text-gradient-owl">OK Owl</p>
                 </div>
-                <h3 className="font-bold text-sm md:text-base text-gradient-owl group-hover:text-gradient-meme transition-all duration-300">
-                  {sticker.name}
-                </h3>
-                <div className="w-12 h-1 bg-gradient-moonlight mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
-          ))}
+
+            <div className="col-start-3 md:col-start-4 lg:col-start-5 transform translate-y-8 -rotate-6">
+              <div className="group cursor-pointer">
+                <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-meme-glow/50 transition-all duration-300 hover:scale-110 hover:rotate-12">
+                  <img src={stickerShy} alt="Shy Owl" className="w-24 h-24 mx-auto group-hover:animate-pulse" />
+                  <p className="text-xs font-bold text-center mt-2 text-gradient-meme">Shy Owl</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Center feature - larger */}
+            <div className="col-span-2 md:col-span-1 lg:col-span-2 col-start-1 md:col-start-1 lg:col-start-2 row-start-2 transform rotate-3">
+              <div className="group cursor-pointer">
+                <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm rounded-3xl p-6 border-2 border-accent/30 hover:border-accent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-accent/20">
+                  <img src={stickerParty} alt="Party Owl" className="w-32 h-32 lg:w-40 lg:h-40 mx-auto group-hover:animate-spin group-hover:scale-110 transition-all duration-300" />
+                  <p className="text-sm font-bold text-center mt-3 text-gradient-accent">Party Owl</p>
+                  <div className="w-16 h-1 bg-gradient-accent mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side scattered */}
+            <div className="col-start-3 md:col-start-4 lg:col-start-5 row-start-2 transform translate-y-4 rotate-6">
+              <div className="group cursor-pointer">
+                <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-110 hover:-rotate-12">
+                  <img src={stickerDoctor} alt="Dr. Owl" className="w-28 h-28 mx-auto group-hover:animate-bounce" />
+                  <p className="text-xs font-bold text-center mt-2 text-gradient-primary">Dr. Owl</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row */}
+            <div className="col-start-2 md:col-start-1 lg:col-start-1 row-start-3 transform -translate-y-2 -rotate-12">
+              <div className="group cursor-pointer">
+                <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-moonlight/50 transition-all duration-300 hover:scale-110 hover:rotate-6">
+                  <img src={stickerLaugh} alt="CTO'd Owl" className="w-22 h-22 mx-auto group-hover:animate-pulse" />
+                  <p className="text-xs font-bold text-center mt-2 text-gradient-moonlight">CTO'd Owl</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-start-3 md:col-start-3 lg:col-start-4 row-start-3 transform translate-y-6 rotate-9">
+              <div className="group cursor-pointer">
+                <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-4 border border-border/50 hover:border-polar-ice/50 transition-all duration-300 hover:scale-110 hover:-rotate-3">
+                  <img src={stickerFormal} alt="Formal Owl" className="w-26 h-26 mx-auto group-hover:animate-bounce" />
+                  <p className="text-xs font-bold text-center mt-2 text-gradient-polar">Formal Owl</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <div className="text-center">

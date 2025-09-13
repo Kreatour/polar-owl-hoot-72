@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Sticker, Twitter, Copy, Check, ShoppingCart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import polarOwlHero from "@/assets/polar-owl-hero-new.png";
+import polarOwlHero from "@/assets/polar-owl-hero-curious.gif";
 
 const HeroSection = () => {
   const [isNightVision, setIsNightVision] = useState(false);
