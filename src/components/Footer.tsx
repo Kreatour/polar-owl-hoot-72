@@ -39,14 +39,6 @@ const Footer = () => {
       
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-8">
-          <div className="mb-6">
-            <img 
-              src={polarOwlHero} 
-              alt="Polar Owl footer logo" 
-              className="w-16 h-16 mx-auto rounded-full bg-gradient-owl p-2 opacity-80"
-            />
-          </div>
-          
           <h3 className="text-2xl font-bold font-meme text-gradient-owl mb-4">
             Polar Owl
           </h3>
