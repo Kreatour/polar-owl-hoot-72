@@ -28,8 +28,8 @@ const Footer = () => {
 
   return (
     <footer className="py-16 px-4 bg-gradient-to-t from-card/50 to-background border-t border-border relative">
-      {/* Floating coffee sticker */}
-      <div className="absolute top-8 left-4 md:left-12 z-10 opacity-50 hover:opacity-90 transition-opacity duration-300 feather-float" style={{ animationDelay: '1s' }}>
+      {/* Floating coffee sticker at top center */}
+      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-10 opacity-80 hover:opacity-100 transition-opacity duration-300 feather-float" style={{ animationDelay: '1s' }}>
         <img 
           src={stickerCoffee2} 
           alt="Coffee owl with big eyes"
