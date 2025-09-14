@@ -42,12 +42,22 @@ const CommunitySection = () => {
         <div className="flex justify-center gap-6 mb-8">
           {socialLinks.map((link, index) => {
             const Icon = link.icon;
+            const handleClick = () => {
+              if (link.name === "Telegram") {
+                window.open('https://t.me/polarowlchannel', '_blank');
+              } else if (link.name === "Twitter (X)") {
+                window.open('https://x.com/polarowl25', '_blank');
+              } else if (link.name === "Sticker Pack") {
+                window.open('https://t.me/addstickers/Polar_Owl', '_blank');
+              }
+            };
             return (
               <Button
                 key={index}
                 variant="outline"
                 size="lg"
                 className={`group p-6 border-2 border-border ${link.bgColor} ${link.color} transition-all duration-300 hover:scale-105 hover:shadow-moonlight min-w-[80px] min-h-[80px]`}
+                onClick={handleClick}
               >
                 <Icon className="h-8 w-8" />
               </Button>
