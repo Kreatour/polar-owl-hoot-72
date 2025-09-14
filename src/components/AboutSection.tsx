@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Heart, Zap } from "lucide-react";
+import { Eye, Users, Crown } from "lucide-react";
 import stickerCoffee from "@/assets/stickers/polar-owl-coffee.gif";
 
 const AboutSection = () => {
@@ -22,7 +22,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="bg-card/50 backdrop-blur-sm border-border hover:shadow-owl transition-all duration-300 hover:scale-105">
             <CardContent className="p-6 text-center">
-              <Brain className="h-12 w-12 text-moonlight mx-auto mb-4" />
+              <Eye className="h-12 w-12 text-moonlight mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gradient-moonlight mb-2">Wisdom</h3>
               <p className="text-muted-foreground">
                 Born from the ancient knowledge of OG Telegram sticker packs
@@ -32,7 +32,7 @@ const AboutSection = () => {
 
           <Card className="bg-card/50 backdrop-blur-sm border-border hover:shadow-moonlight transition-all duration-300 hover:scale-105">
             <CardContent className="p-6 text-center">
-              <Heart className="h-12 w-12 text-accent mx-auto mb-4" />
+              <Users className="h-12 w-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gradient-meme mb-2">Community</h3>
               <p className="text-muted-foreground">
                 United by memes, bonded by the shared experience of getting CTO'd
@@ -42,7 +42,7 @@ const AboutSection = () => {
 
           <Card className="bg-card/50 backdrop-blur-sm border-border hover:shadow-meme transition-all duration-300 hover:scale-105">
             <CardContent className="p-6 text-center">
-              <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Crown className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gradient-owl mb-2">Legacy</h3>
               <p className="text-muted-foreground">
                 The spirit lives on in every hoot, every meme, every remember
