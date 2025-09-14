@@ -28,17 +28,19 @@ const Footer = () => {
 
   return (
     <footer className="py-16 px-4 bg-gradient-to-t from-card/50 to-background border-t border-border relative">
-      {/* Floating coffee sticker at top center */}
-      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-10 opacity-80 hover:opacity-100 transition-opacity duration-300 feather-float" style={{ animationDelay: '1s' }}>
-        <img 
-          src={stickerCoffee2} 
-          alt="Coffee owl with big eyes"
-          className="w-14 h-14 md:w-18 md:h-18 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer"
-        />
-      </div>
       
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-8">
+          {/* Coffee owl positioned above Polar Owl text */}
+          <div className="mb-4 flex justify-center">
+            <img 
+              src={stickerCoffee2} 
+              alt="Coffee owl with big eyes"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer opacity-80 hover:opacity-100 feather-float"
+              style={{ animationDelay: '1s' }}
+            />
+          </div>
+          
           <h3 className="text-2xl font-bold font-meme text-gradient-owl mb-4">
             Polar Owl
           </h3>
