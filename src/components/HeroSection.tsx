@@ -97,6 +97,7 @@ const HeroSection = () => {
               size="icon"
               variant="outline"
               className="w-12 h-12 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground rounded-full transition-all duration-300 hover:scale-110"
+              onClick={() => window.open('https://x.com/polarowl25', '_blank')}
             >
               <Twitter className="h-6 w-6" />
             </Button>
@@ -105,6 +106,7 @@ const HeroSection = () => {
               size="icon"
               variant="outline"
               className="w-12 h-12 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 hover:scale-110"
+              onClick={() => window.open('https://t.me/polarowlchannel', '_blank')}
             >
               <MessageCircle className="h-6 w-6" />
             </Button>

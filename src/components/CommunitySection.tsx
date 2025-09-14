@@ -74,6 +74,7 @@ const CommunitySection = () => {
           <Button 
             size="default" 
             className="bg-gradient-meme hover:shadow-meme text-accent-foreground font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+            onClick={() => window.open('https://t.me/polarowlchannel', '_blank')}
           >
             <MessageCircle className="mr-2 h-4 w-4" />
             Hoot with Us
